@@ -79,8 +79,6 @@ div.sticky-min-bottom a {
     text-decoration: none;
 }
 
-
-}
 div.sticky-min-bottom {
     position: -webkit-sticky;
     position: sticky;
@@ -94,13 +92,16 @@ div.sticky-min-bottom {
     border-end-end-radius: 25px;
     border-bottom-left-radius: 25px;
 }
+
 div.sticky a:hover {
     border-color: lime;
     background-color: var(--scrool-color);
 }
+
 div.sticky a.active {
     border-color: lime;
 }
+
 div.sticky a {
     background-color: rgba(0, 0, 0, 0.452);
     border-style: solid;
@@ -114,6 +115,7 @@ div.sticky a {
     padding-left: 50px;
     padding-right: 50px;
 }
+
 div.sticky-min {
     position: -webkit-sticky;
     position: sticky;
@@ -131,31 +133,41 @@ div.sticky-min {
     border-bottom-left-radius: 25px;
     border-top-right-radius: 25px;
 }
+
 .bold {
     color: white;
 }
 
+
 /* width */
+
 ::-webkit-scrollbar {
     width: 8px;
 }
 
+
 /* Track */
+
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px rgb(0, 0, 0);
     border-radius: 10px;
 }
 
+
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
     background: var(--scrool-color);
     border-radius: 10px;
 }
 
+
 /* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
     background: var(--scrool-color);
 }
+
 .sidebar {
     border-end-end-radius: 20px;
     border-start-start-radius: 20px;
@@ -173,30 +185,37 @@ div.sticky-min {
     height: 98%;
     overflow: auto;
 }
+
 .sticky-min a {
     color: var(--sticky-fore);
     text-decoration: none;
 }
+
 .sticky-min a:hover:not(.active) {
     color: var(--sticky-fore-hover);
     text-decoration: none;
 }
+
 .in a {
     display: block;
     color: var(--sidebar-fore);
     padding: 6px;
     text-decoration: none;
 }
+
 .mdiv {
     text-indent: 10px;
 }
+
 .in a.active {
     background-color: #292C2F;
     color: #9b66f7;
 }
+
 .in a:hover:not(.active) {
     color: #673AB7;
 }
+
 div.content {
     margin-left: 200px;
     padding: 1px 16px;
@@ -204,21 +223,21 @@ div.content {
     padding-left: 1%;
     padding-right: 1%;
 }
+
 @media screen and (max-width: 700px) {
     .sidebar {
         width: 100%;
         height: auto;
         position: relative;
     }
-    
     .sidebar a {
         float: left;
     }
-    
     div.content {
         margin-left: 0;
     }
 }
+
 @media screen and (max-width: 400px) {
     .sidebar a {
         text-align: center;
