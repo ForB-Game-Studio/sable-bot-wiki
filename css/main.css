@@ -1,0 +1,227 @@
+:root {
+    --sticky-bg: #7347c0;
+    --scrool-color: #673AB7;
+    --sticky-fore-hover: #00b7ff;
+    --sticky-fore: #fdfdfd;
+    --sidebar-fore: #98a3ad;
+}
+
+body {
+    margin: 0;
+    color: #98a3ad;
+    font-family: "Lato", sans-serif;
+    background-color: #131516;
+    border-radius: 5px;
+    border-width: 8px;
+    border-color: transparent;
+    border-style: solid;
+    text-align: center;
+}
+
+div.main {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.title {
+    font-size: larger;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: var(--drak-theme-color);
+    font-weight: bolder;
+}
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    margin: 0;
+    color: var(--sticky-fore);
+    font-family: "Lato", sans-serif;
+    background-color: var(--sticky-bg);
+    border-end-end-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+div.sticky-min-bottom a::selection {
+    color: transparent;
+    background-color: transparent;
+}
+
+div.in a::selection {
+    background-color: transparent;
+    color: null;
+}
+
+div.content ::selection {
+    color: white;
+    background-color: var(--sticky-bg);
+}
+
+div.sticky-min-bottom a {
+    color: transparent;
+}
+
+::selection {
+    background-color: null;
+    color: null;
+}
+
+.sticky a::selection {
+    background-color: transparent;
+    color: null;
+}
+
+.sticky a {
+    color: var(--sticky-fore);
+    text-decoration: none;
+}
+
+
+}
+div.sticky-min-bottom {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 0px;
+    top: 98%;
+    margin: 0;
+    color: var(--sticky-fore);
+    font-family: "Lato", sans-serif;
+    background-color: var(--sticky-bg);
+    border-end-end-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+div.sticky a:hover {
+    border-color: lime;
+    background-color: var(--scrool-color);
+}
+div.sticky a.active {
+    border-color: lime;
+}
+div.sticky a {
+    background-color: rgba(0, 0, 0, 0.452);
+    border-style: solid;
+    border-width: thin;
+    border-radius: 100px;
+    border-color: #131516;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    margin-right: 2%;
+    margin-left: 2%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+div.sticky-min {
+    position: -webkit-sticky;
+    position: sticky;
+    text-align: center;
+    border-right-width: 2px;
+    padding: 10px;
+    margin: 0;
+    color: var(--sticky-fore);
+    font-family: "Lato", sans-serif;
+    background-color: var(--sticky-bg);
+    border: 1px;
+    border-color: 1px #131516;
+    border-end-end-radius: 25px;
+    border-start-start-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.bold {
+    color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--scrool-color);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrool-color);
+}
+.sidebar {
+    border-end-end-radius: 20px;
+    border-start-start-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 0%;
+    text-align: left;
+    margin: 0;
+    text-indent: 2%;
+    padding: 0px;
+    font-size: 95%;
+    width: 200px;
+    background-color: #292C2F;
+    position: fixed;
+    height: 98%;
+    overflow: auto;
+}
+.sticky-min a {
+    color: var(--sticky-fore);
+    text-decoration: none;
+}
+.sticky-min a:hover:not(.active) {
+    color: var(--sticky-fore-hover);
+    text-decoration: none;
+}
+.in a {
+    display: block;
+    color: var(--sidebar-fore);
+    padding: 6px;
+    text-decoration: none;
+}
+.mdiv {
+    text-indent: 10px;
+}
+.in a.active {
+    background-color: #292C2F;
+    color: #9b66f7;
+}
+.in a:hover:not(.active) {
+    color: #673AB7;
+}
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .sidebar a {
+        float: left;
+    }
+    
+    div.content {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
