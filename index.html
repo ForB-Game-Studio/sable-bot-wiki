@@ -1,35 +1,112 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="css/main.css">
-<style>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
 
-</style>
+    </style>
 </head>
+
 <body>
-<script>
+    <div class="sidebar" id="hide">
+        <div class="sticky-min">
+            <!-- href="home.html" -->
+            <a onclick="myMove();" href="#">
+                <center>Hide</center>
+            </a>
+        </div>
+        <br>
+        <div class="in" id="in">
+            <a href="admin.html">Admin Commands</a>
+            <a href="chat.html">Chat Command</a>
+            <a href="about.html">About</a>
+            <a href="support.html">Support</a><br>
+        </div>
+        <div id="bottom" class="sticky-min-bottom">
+            <a>.</a>
+        </div>
+    </div>
 
-</script>
-<div class="sidebar">
-  <a class="active" href="#home">Home</a>
-  <a href="#news"><br>%20News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about" onclick="do();">About</a><a href="#about">About</a>
-</div>
+    <center>
 
-<div class="content">
-  <h2>Responsive Sidebar Example</h2>
-  <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
-  <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
-  <h3>Resize the browser window to see the effect.</h3>
-</div>
-<div class="#about">
-  <h2>Responsive Sidebar Example</h2>
-  <p>aack and center the navigation links.</p>
-  <h3>Resize the browser window to see the effect.</h3>
-</div>
+        <div class="content">
+            <div class="sticky menu col-1">
+                <a href="admin.html">Admin Command</a>
+                <a class="active" href="home.html">Home</a>
+                <a href="chat.html">Chat Command</a>
+            </div>
+            <div class="main">
+                <main>
+                    <h2 class="title">Responsive Sidebar Example</h2>
+                    <p>This is Example site <br><br> ~~ coded by reckhi <br><br> ~~ sponsor twitch.tv/greywolfs90
 
+            </div>
+            </main>
+        </div>
+        </div>
+
+
+        <center>
+
+            <script>
+                var hidden = false;
+
+                function myMove() {
+                    if (!hidden) {
+                        close();
+
+                    } else {
+                        open();
+
+                    }
+                }
+
+
+                function close() {
+                    let id = null;
+                    const elem = document.getElementById("hide");
+                    clearInterval(id);
+                    let pos = 98;
+                    id = setInterval(closeframe, 5);
+                    hidden = true;
+
+                    function closeframe() {
+                        if (pos == 10) {
+                            clearInterval(id);
+                            document.getElementById('hide').style.backgroundColor = 'transparent';
+                            document.getElementById('bottom').hidden = true;
+                            document.getElementById('in').hidden = true;
+                        } else {
+                            pos--;
+                            elem.style.height = pos + "%";
+                        }
+                    }
+                }
+
+                function open() {
+                    let id = null;
+                    const elem = document.getElementById("hide");
+                    clearInterval(id);
+                    let pos = 10;
+                    id = setInterval(openframe, 5);
+                    hidden = false;
+
+                    function openframe() {
+                        if (pos == 98) {
+                            clearInterval(id);
+                        } else {
+                            document.getElementById('hide').style.backgroundColor = '#292C2F';
+                            document.getElementById('in').hidden = false;
+                            document.getElementById('bottom').hidden = false;
+                            pos++;
+                            elem.style.height = pos + "%";
+                        }
+                    }
+                }
+            </script>
 </body>
+
 </html>
